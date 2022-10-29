@@ -1,17 +1,17 @@
-﻿namespace MordorsCruelPlan
+namespace MordorsCruelPlan
 {
     public abstract class Food
     {
-        public abstract string Name { get; }
+        public abstract string Name { get; } // вводимо назву їжі яку споживає Гендельф
 
-        public abstract int Points { get; }
+        public abstract int Points { get; } // вводимо очки які відповідають кожній страві
     }
 
     public class Apple : Food
     {
-        public override string Name => "Apple";
+        public override string Name => "Apple";// яблуко
 
-        public override int Points => 1;
+        public override int Points => 1; // одне очко щастя
     }
 
     public class Cram : Food
@@ -51,7 +51,7 @@
 
     public class OtherFood : Food
     {
-        public OtherFood(string name)
+        public OtherFood(string name) // інша їжа
         {
             this.Name = name;
         }
