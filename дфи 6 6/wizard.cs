@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 
 namespace MordorsCruelPlan
 {
@@ -21,15 +21,15 @@ namespace MordorsCruelPlan
 
         public void Eat(string foodName)
         {
-            var food = this.foodFactory.GetFood(foodName);
-            this.happinessPoints += food.Points;
-            this.mood = this.moodFactory.GetMood(this.happinessPoints);
+            var food = this.foodFactory.GetFood(foodName);// перевіряємо до чого належить
+            this.happinessPoints += food.Points; // додаємо очки щастя
+            this.mood = this.moodFactory.GetMood(this.happinessPoints);// перевіряємо чому належить така к-сть очок
         }
 
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append(this.happinessPoints.ToString());
+            sb.Append(this.happinessPoints.ToString());//перетворює в рядок
             sb.Append(this.mood.Name);
             return sb.ToString();
         }
