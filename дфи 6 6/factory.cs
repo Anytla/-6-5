@@ -1,10 +1,10 @@
-﻿namespace MordorsCruelPlan
+namespace MordorsCruelPlan
 {
     public class FoodFactory
     {
         public Food GetFood(string name)
         {
-            switch (name.ToLower())
+            switch (name.ToLower()) // перераховуємо яку їжу їсть Гендельф
             {
                 case "cram":
                     return new Cram();
@@ -26,7 +26,7 @@
 
     public class MoodFactory
     {
-        public Mood GetMood(int points)
+        public Mood GetMood(int points) // підраховуємо скільки очок вийде при додаванні
         {
             if (points < -5)
             {
