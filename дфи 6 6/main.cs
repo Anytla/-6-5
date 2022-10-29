@@ -1,4 +1,3 @@
-﻿
 namespace MordorsCruelPlan
 {
     public class Startup
@@ -7,14 +6,14 @@ namespace MordorsCruelPlan
         {
             var wizard = new Wizard("Gandalf the Gray");
 
-            var foodList = Console.ReadLine().Split();
+            var foodList = Console.ReadLine().Split( );
 
-            foreach (var food in foodList)
+            foreach (var food in foodList) // для кожного елемента foodlist виконати з класу wizard метод Eat
             {
                 wizard.Eat(food);
             }
 
-            Console.WriteLine(wizard);
+            Console.WriteLine(wizard);// виводимо wizard
         }
     }
 }
