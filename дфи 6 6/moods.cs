@@ -2,7 +2,7 @@
 {
     public abstract class Mood
     {
-        public abstract string Name { get; }
+        public abstract string Name { get; } // вводим настрій Гендельфа
     }
 
     public class Angry : Mood
